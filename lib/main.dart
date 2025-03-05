@@ -1,4 +1,5 @@
 import 'package:family_vault_beta/card_carousel.dart';
+import 'package:family_vault_beta/doc_tile.dart';
 import 'package:family_vault_beta/fav_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -202,53 +203,12 @@ class FamilyVault extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    width: 400,
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        child: Image.asset("assets/govt.jpeg"),
-                        backgroundColor: Colors.white,
-                      ),
-                      title: Text('Driving License'),
-                      subtitle: Text('Darshan | Govt. Document'),
-                      trailing: Icon(Icons.arrow_forward),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 400,
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        child: Image.asset("assets/govt.jpeg"),
-                        backgroundColor: Colors.white,
-                      ),
-                      title: Text('Driving License'),
-                      subtitle: Text('Darshan | Govt. Document'),
-                      trailing: Icon(Icons.arrow_forward),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 400,
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        child: Image.asset("assets/govt.jpeg"),
-                        backgroundColor: Colors.white,
-                      ),
-                      title: Text('Driving License'),
-                      subtitle: Text('Darshan | Govt. Document'),
-                      trailing: Icon(Icons.arrow_forward),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 400,
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        child: Image.asset("assets/govt.jpeg"),
-                        backgroundColor: Colors.white,
-                      ),
-                      title: Text('Driving License'),
-                      subtitle: Text('Darshan | Govt. Document'),
-                      trailing: Icon(Icons.arrow_forward),
-                    ),
+                  ListView.builder(
+                    itemBuilder: (context, index) {
+                      return DocumentTile();
+                    },
+                    itemCount: 5,
+                    shrinkWrap: true,
                   )
                 ],
               ),

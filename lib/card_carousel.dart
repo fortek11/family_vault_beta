@@ -92,7 +92,12 @@ class CarouselItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xFF2D2D66),
+        gradient: LinearGradient(
+          colors: [Color(0xffbf5ae0), Color(0xffa811da)],
+          stops: [0, 1],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Column(
