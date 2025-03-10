@@ -1,3 +1,4 @@
+import 'package:family_vault_beta/all_docs_screen.dart';
 import 'package:family_vault_beta/card_carousel.dart';
 import 'package:family_vault_beta/doc_tile.dart';
 import 'package:family_vault_beta/fav_card.dart';
@@ -74,84 +75,13 @@ class FamilyVault extends StatelessWidget {
                 SizedBox(
                   height: 2,
                 ),
-                Text(
-                  '    Your vault members',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.shade100,
-                          spreadRadius: 3,
-                          blurRadius: 3)
-                    ],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  padding: EdgeInsets.all(25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Column(
-                        children: [
-                          CircleAvatar(
-                            child: Icon(Icons.person_outline),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text('Darshan'),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          CircleAvatar(
-                            child: Icon(Icons.person_outline),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text('Mansi'),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          CircleAvatar(
-                            child: Icon(Icons.person_outline),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text('Nandu'),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          CircleAvatar(
-                            child: Icon(Icons.person_add_alt_1_outlined),
-                          ),
-                          Text(
-                            'Add Member',
-                            style: TextStyle(fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Text(
-                  '    Your Favorites',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                // Text(
+                //   ' Your vault members',
+                //   style: TextStyle(
+                //     fontSize: 20,
+                //     fontWeight: FontWeight.bold,
+                //   ),
+                // ),
                 SizedBox(
                   height: 5,
                 ),
@@ -169,6 +99,16 @@ class FamilyVault extends StatelessWidget {
                       }),
                 ),
               ],
+            ),
+            Text(
+              'Your Favorites',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 15,
             ),
             CarouselScreen(),
             SizedBox(
@@ -188,24 +128,35 @@ class FamilyVault extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            'View More ',
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_sharp,
-                            color: Colors.blue,
-                            size: 12,
-                          )
-                        ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return AllDocsScreen();
+                          }));
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              'View More ',
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_sharp,
+                              color: Colors.blue,
+                              size: 12,
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   ListView.builder(
                     itemBuilder: (context, index) {
-                      return DocumentTile();
+                      return DocumentTile('education');
                     },
                     itemCount: 5,
                     shrinkWrap: true,
