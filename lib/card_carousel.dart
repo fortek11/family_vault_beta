@@ -37,7 +37,7 @@ class _CarouselScreenState extends State<CarouselScreen> {
           items: _carouselItems,
           options: CarouselOptions(
             enableInfiniteScroll: true,
-            height: 500.0,
+            height: 285.0,
             viewportFraction: 0.7,
             enlargeCenterPage: true,
             onPageChanged: (index, reason) {
