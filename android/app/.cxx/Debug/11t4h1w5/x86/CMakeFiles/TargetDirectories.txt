@@ -1,0 +1,2 @@
+C:/development/Onehub_new/family_vault_beta/android/app/.cxx/Debug/11t4h1w5/x86/CMakeFiles/edit_cache.dir
+C:/development/Onehub_new/family_vault_beta/android/app/.cxx/Debug/11t4h1w5/x86/CMakeFiles/rebuild_cache.dir

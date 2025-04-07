@@ -63,10 +63,7 @@ class DocumentTile extends StatelessWidget {
         leading: Container(
           height: 50,
           width: 50,
-          child: Icon(
-            Icons.file_copy,
-            color: Colors.white,
-          ),
+          child: Image.asset('assets/govt.png'),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(17.5),
               gradient: returnGradient(category)),
